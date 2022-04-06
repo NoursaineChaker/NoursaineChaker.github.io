@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data visualization | Weather Worldwide</title>
+    <link rel="shortcut icon" type="image/x-icon"  href="images/day-and-night.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto');
+
+        * {
+            font-family: 'Roboto', sans-serif;
+        }
+        #californiachart,#parischart,#mumbaichart,#soussechart{
+            max-width: 760px;
+            margin: 35px auto;
+            opacity: 0.9;
+            color: black;
+        }
+
+        #timeline-chart .apexcharts-toolbar {
+            opacity: 1;
+            border: 0;
+        }
+
+        nav img {
+          width:300px;
+        }
+        /*navigation bar*/
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          width: 200px;
+          background-color: #f1f1f1;
+        }
+
+        li a {
+          display: block;
+          color: #000;
+          padding: 8px 16px;
+          text-decoration: none;
+
+        }
+
+        /* Change the link color on hover */
+        li a:hover {
+          background-color: #e67300;
+          color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/logo.png" alt="logo Weather Worldwide"></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="vis.html">Data visualization</a></li>
+            </div>
+        </nav>
+        
+    </section>
+
+    <div class="border border-primary m-3">
+
+        <div class="row">
+
+           
+            <div class="col-8" id="parischart">
+                <div id="timeline-chart"></div>
+            </div>
+            <div class="col-8" id="californiachart">
+                <div id="timeline-chart"></div>
+            </div>
+             
+            <div class="col-8" id="soussechart">
+                <div id="timeline-chart"></div>
+            </div>
+            <div class="col-8" id="mumbaichart">
+                <div id="timeline-chart"></div>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="vis.js"></script>
+</body>
+
+</html>
